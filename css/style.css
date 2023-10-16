@@ -14,6 +14,11 @@ h2 {
     padding: 3rem 0;
 }
 
+h3 {
+    font-size: 2.5rem;
+    margin-bottom: 3.5rem;
+}
+
 /* #endregion TYPOGRAPHY*/
 
 /* #region COMMON*/
@@ -35,6 +40,10 @@ section {
 
 .violet .container.grid .card {
     background-color: white;
+}
+
+.box h3 {
+    color: #fdc15f;
 }
 
 /* #endregion COMMON*/
@@ -74,7 +83,8 @@ section {
 }
 
 .info,
-.quote {
+.quote,
+.box {
     border: 2px dashed black;
 }
 
@@ -107,7 +117,7 @@ header {
     gap: 1.5rem;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 6.25rem;
+    padding-bottom: 6.25rem;
 }
 
 #grow {
@@ -119,8 +129,8 @@ header {
 
 /* Sezione Strategic Planning */
 .violet {
+    color: #ffffff;
     background-color: #9792e4;
-    padding-bottom: 3rem;
 }
 
 .container .col {
@@ -161,6 +171,20 @@ header {
 
 /* /Sezione About us */
 
+/* Sezione Call to action */
+.box {
+    margin: 0 auto;
+    padding: 4rem 3rem;
+    width: 30%;
+}
+
+.box .btn {
+    margin: 2rem;
+}
+
+/* /Sezione Call to action */
+
+
 /* #endregion MAIN*/
 
 
@@ -170,6 +194,7 @@ header {
 
 
 /* #region MEDIA QUERIES*/
+/* Desktop da 768px a 1400px*/
 @media screen and (max-width:1400px) {
     .container {
         width: 100%;
@@ -184,8 +209,10 @@ header {
     .round {
         margin: 0 auto;
     }
+
 }
 
+/* Tablet da 480px a 768px*/
 @media screen and (max-width:768px) {
     .container.plan {
         flex-direction: column;
@@ -213,15 +240,20 @@ header {
     }
 
     .about .container .info {
-        width: 50%;
+        width: 60%;
     }
 
     .about .container .quote {
-        width: 50%;
+        width: 40%;
+    }
+
+    .box {
+        width: 100%;
     }
 
 }
 
+/* Mobile da 0 a 480px*/
 @media screen and (max-width:480px) {
     .grid {
         flex-direction: column;
@@ -245,7 +277,7 @@ header {
     }
 
     .about .container .quote {
-        width: 50%;
+        width: 70%;
         display: flex;
         flex-direction: column;
     }
@@ -253,6 +285,11 @@ header {
     .about .container .info {
         width: 100%;
     }
+
+    .box {
+        width: 100%;
+    }
+
 }
 
 /* #endregion MEDIA QUERIES*/
