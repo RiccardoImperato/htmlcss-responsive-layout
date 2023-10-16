@@ -174,13 +174,15 @@ header {
 /* Sezione Call to action */
 .box {
     margin: 0 auto;
-    padding: 4rem 3rem;
-    width: 30%;
+    padding: 2.5rem;
+    width: 50%;
+    text-align: center;
 }
 
 .box .btn {
     margin: 2rem;
 }
+
 
 /* /Sezione Call to action */
 
@@ -189,6 +191,16 @@ header {
 
 
 /* #region FOOTER*/
+footer {
+    color: #ffffff;
+    background-color: #333333;
+}
+
+footer .box {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
 
 /* #endregion FOOTER*/
 
