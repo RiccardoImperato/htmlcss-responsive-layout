@@ -10,6 +10,10 @@
 
 /* #region TYPOGRAPHY*/
 
+h2 {
+    padding: 3rem 0;
+}
+
 /* #endregion TYPOGRAPHY*/
 
 /* #region COMMON*/
@@ -29,7 +33,6 @@ section {
     text-align: center;
 }
 
-
 .violet .container.grid .card {
     background-color: white;
 }
@@ -37,6 +40,13 @@ section {
 /* #endregion COMMON*/
 
 /* #region DEBUG*/
+.round {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px dashed black;
+    margin: 0 auto;
+}
 
 .col.left,
 .col.right {
@@ -59,15 +69,13 @@ section {
     width: 100%;
 }
 
-.people {
-    text-align: center;
-    padding: 3rem;
+.about .container {
+    height: 620px;
 }
 
-.person {
-    background-color: #9792e4;
-    margin: 2rem 0;
-    padding: 3rem;
+.info,
+.quote {
+    border: 2px dashed black;
 }
 
 /* #endregion DEBUG*/
@@ -95,9 +103,10 @@ header {
 /* #region MAIN*/
 
 /* Sezione Demo */
-.grid {
+.container.grid {
     gap: 1.5rem;
     flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 6.25rem;
 }
 
@@ -109,27 +118,48 @@ header {
 /* /Sezione Demo */
 
 /* Sezione Strategic Planning */
-
 .violet {
     background-color: #9792e4;
     padding-bottom: 3rem;
 }
 
-.col {
+.container .col {
     padding: 3rem;
 }
 
 /* /Sezione Strategic Planning */
 
 /* Sezione Testimonial */
-
-.violet h2 {
-    padding: 3rem 0;
+.container .people {
+    text-align: center;
+    padding: 3rem;
 }
 
-/* /Sezione Testimonial */
+.container .people .person {
+    display: flex;
+    gap: 2rem;
+    background-color: #9792e4;
+    margin: 2rem 0;
+    padding: 3rem;
+}
 
+/*/ Sezione Testimonial */
 
+/* Sezione About us */
+.about .container {
+    padding: 6.5rem 0;
+    gap: 3rem;
+}
+
+.about .container .info {
+    width: 60%;
+}
+
+.about .container .quote {
+    width: 40%;
+}
+
+/* /Sezione About us */
 
 /* #endregion MAIN*/
 
@@ -144,6 +174,15 @@ header {
     .container {
         width: 100%;
         padding: 0 1.8rem;
+    }
+
+    .about .container {
+        gap: 2.5rem;
+        padding: 2rem;
+    }
+
+    .round {
+        margin: 0 auto;
     }
 }
 
@@ -165,13 +204,22 @@ header {
         align-items: start;
     }
 
-    .container.grid {
-        justify-content: center;
-    }
-
     .violet .container.grid .card {
         width: calc((100% - 3rem) / 2);
     }
+
+    .about .container {
+        padding: 2rem;
+    }
+
+    .about .container .info {
+        width: 50%;
+    }
+
+    .about .container .quote {
+        width: 50%;
+    }
+
 }
 
 @media screen and (max-width:480px) {
@@ -184,7 +232,25 @@ header {
         width: 100%;
     }
 
+    .person {
+        flex-direction: column;
+    }
+
     .violet .container.grid .card {
+        width: 100%;
+    }
+
+    .about .container {
+        flex-direction: column;
+    }
+
+    .about .container .quote {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about .container .info {
         width: 100%;
     }
 }
