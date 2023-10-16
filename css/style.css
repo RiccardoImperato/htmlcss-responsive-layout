@@ -22,6 +22,11 @@ h3 {
 /* #endregion TYPOGRAPHY*/
 
 /* #region COMMON*/
+img {
+    width: 100%;
+    display: block;
+}
+
 .container {
     max-width: 1180px;
     margin: 0 auto;
@@ -44,6 +49,14 @@ section {
 
 .box h3 {
     color: #fdc15f;
+}
+
+.btn {
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 0.6rem;
+    border-radius: 1.5rem;
 }
 
 /* #endregion COMMON*/
@@ -92,20 +105,38 @@ section {
 
 /* #region HEADER*/
 header {
+    color: #ffffff;
     background-color: #0084fd;
     margin-bottom: 50px;
 }
 
-.navbar {
+header .navbar {
     height: 80px;
     line-height: 80px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-#logo,
-.menu {
-    background-color: white;
+header .navbar .menu {
+    display: flex;
+}
+
+header .navbar ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+header .navbar a:not(.btn) {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.only-mobile {
+    display: none;
 }
 
 /* #endregion HEADER*/
@@ -226,6 +257,14 @@ footer .box {
 
 /* Tablet da 480px a 768px*/
 @media screen and (max-width:768px) {
+    .only-mobile {
+        display: block;
+    }
+
+    header .navbar .menu ul {
+        display: none;
+    }
+
     .container.plan {
         flex-direction: column;
     }
@@ -267,6 +306,7 @@ footer .box {
 
 /* Mobile da 0 a 480px*/
 @media screen and (max-width:480px) {
+
     .grid {
         flex-direction: column;
     }
