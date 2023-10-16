@@ -19,6 +19,11 @@ h3 {
     margin-bottom: 3.5rem;
 }
 
+h4 {
+    color: #0084fd;
+    font-size: 1.5rem;
+}
+
 /* #endregion TYPOGRAPHY*/
 
 /* #region COMMON*/
@@ -31,12 +36,6 @@ img {
     max-width: 1180px;
     margin: 0 auto;
     display: flex;
-}
-
-.card {
-    height: 345px;
-    width: calc((100% - 3rem) / 3);
-    background-color: #b5ddff;
 }
 
 section {
@@ -57,6 +56,15 @@ section {
     background-color: #ffffff;
     padding: 0.6rem;
     border-radius: 1.5rem;
+}
+
+.btn-blue {
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #0084fd;
+    padding: 0.6rem 3.125rem;
+    border-radius: 1rem;
 }
 
 /* #endregion COMMON*/
@@ -156,6 +164,45 @@ header .navbar a:not(.btn) {
     flex-grow: 2;
 }
 
+.card {
+    width: calc((100% - 3rem) / 3);
+    color: #5a6e7f;
+    font-weight: bold;
+    background-color: #b5ddff;
+    padding: 2rem;
+    display: flex;
+    gap: 2.5rem;
+    border-radius: 1rem;
+}
+
+.card .left {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: start;
+}
+
+.card .right {
+    align-self: end;
+    position: relative;
+    bottom: -2rem;
+}
+
+.card .grid-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card .grid-box h4 {
+    margin: 1.8rem 0 2.5rem;
+}
+
+.card .grid-box i {
+    font-size: 5rem;
+    color: #0084fd;
+}
+
 /* /Sezione Demo */
 
 /* Sezione Strategic Planning */
@@ -239,6 +286,7 @@ footer .box {
 /* #region MEDIA QUERIES*/
 /* Desktop da 768px a 1400px*/
 @media screen and (max-width:1400px) {
+
     .container {
         width: 100%;
         padding: 0 1.8rem;
@@ -257,12 +305,17 @@ footer .box {
 
 /* Tablet da 480px a 768px*/
 @media screen and (max-width:768px) {
+
     .only-mobile {
         display: block;
     }
 
     header .navbar .menu ul {
         display: none;
+    }
+
+    .card {
+        flex-direction: column;
     }
 
     .container.plan {
@@ -314,6 +367,11 @@ footer .box {
     .card,
     #grow {
         width: 100%;
+    }
+
+    .card .right {
+        display: flex;
+        justify-content: center;
     }
 
     .person {
