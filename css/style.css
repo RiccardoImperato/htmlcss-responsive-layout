@@ -19,6 +19,20 @@
     display: flex;
 }
 
+.card {
+    height: 345px;
+    width: calc((100% - 3rem) / 3);
+    background-color: #b5ddff;
+}
+
+section {
+    text-align: center;
+}
+
+
+.violet .container.grid .card {
+    background-color: white;
+}
 
 /* #endregion COMMON*/
 
@@ -87,12 +101,6 @@ header {
     margin-bottom: 6.25rem;
 }
 
-.card {
-    height: 345px;
-    width: calc((100% - 50px) / 3);
-    background-color: #b5ddff;
-}
-
 #grow {
     width: 50%;
     flex-grow: 2;
@@ -104,6 +112,7 @@ header {
 
 .violet {
     background-color: #9792e4;
+    padding-bottom: 3rem;
 }
 
 .col {
@@ -111,6 +120,16 @@ header {
 }
 
 /* /Sezione Strategic Planning */
+
+/* Sezione Testimonial */
+
+.violet h2 {
+    padding: 3rem 0;
+}
+
+/* /Sezione Testimonial */
+
+
 
 /* #endregion MAIN*/
 
@@ -124,7 +143,7 @@ header {
 @media screen and (max-width:1400px) {
     .container {
         width: 100%;
-        padding: 0 30px;
+        padding: 0 1.8rem;
     }
 }
 
@@ -146,6 +165,13 @@ header {
         align-items: start;
     }
 
+    .container.grid {
+        justify-content: center;
+    }
+
+    .violet .container.grid .card {
+        width: calc((100% - 3rem) / 2);
+    }
 }
 
 @media screen and (max-width:480px) {
@@ -155,6 +181,10 @@ header {
 
     .card,
     #grow {
+        width: 100%;
+    }
+
+    .violet .container.grid .card {
         width: 100%;
     }
 }
