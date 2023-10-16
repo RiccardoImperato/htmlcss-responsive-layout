@@ -13,17 +13,67 @@
 /* #endregion TYPOGRAPHY*/
 
 /* #region COMMON*/
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
 
 /* #endregion COMMON*/
 
 /* #region HEADER*/
+header {
+    background-color: #0084fd;
+    margin-bottom: 50px;
+}
+
+.navbar {
+    height: 80px;
+    line-height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo,
+.menu {
+    background-color: white;
+}
 
 /* #endregion HEADER*/
 
 /* #region MAIN*/
+.grid {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+.card {
+    height: 345px;
+    width: calc((100% - 50px) / 3);
+    background-color: #b5ddff;
+}
+
+
+#grow {
+    width: calc((100% - 50px) / 2);
+    flex-grow: 2;
+}
 
 /* #endregion MAIN*/
 
 /* #region FOOTER*/
 
 /* #endregion FOOTER*/
+
+/* #region MEDIA QUERIES*/
+@media screen and (max-width:1200px) {
+    .container {
+        width: 100%;
+        padding: 0 30px;
+    }
+}
+
+
+/* #endregion MEDIA QUERIES*/
