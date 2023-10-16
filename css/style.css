@@ -45,6 +45,17 @@
     width: 100%;
 }
 
+.people {
+    text-align: center;
+    padding: 3rem;
+}
+
+.person {
+    background-color: #9792e4;
+    margin: 2rem 0;
+    padding: 3rem;
+}
+
 /* #endregion DEBUG*/
 
 /* #region HEADER*/
@@ -71,9 +82,9 @@ header {
 
 /* Sezione Demo */
 .grid {
-    gap: 25px;
+    gap: 1.5rem;
     flex-wrap: wrap;
-    margin-bottom: 100px;
+    margin-bottom: 6.25rem;
 }
 
 .card {
@@ -96,7 +107,7 @@ header {
 }
 
 .col {
-    padding: 50px;
+    padding: 3rem;
 }
 
 /* /Sezione Strategic Planning */
@@ -129,6 +140,10 @@ header {
 
     .col.right.txt {
         display: none;
+    }
+
+    .col.right {
+        align-items: start;
     }
 
 }
