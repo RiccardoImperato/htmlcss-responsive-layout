@@ -10,13 +10,48 @@
 
 /* #region TYPOGRAPHY*/
 
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+}
+
 h2 {
-    padding: 3rem 0;
+    padding-bottom: 3rem;
+    font-size: 3rem;
+}
+
+.people {
+    font-size: 1.25rem;
+}
+
+.violet h2 {
+    padding-top: 3rem;
 }
 
 h3 {
-    font-size: 2.5rem;
-    margin-bottom: 3.5rem;
+    font-size: 2.125rem;
+    margin: 3.5rem 0;
+}
+
+.info h3 {
+    font-size: 4.5rem;
+}
+
+.info p {
+    font-size: 1.25rem;
+}
+
+.quote p {
+    font-size: 1.875rem;
+}
+
+.container .box {
+    font-size: 1.125rem;
+}
+
+.box h3 {
+    color: #fdc15f;
+    font-size: 6rem;
 }
 
 h4 {
@@ -24,9 +59,36 @@ h4 {
     font-size: 1.5rem;
 }
 
+.col.left .txt {
+    font-size: 1.125rem;
+}
+
+.col.right .image .card h4 {
+    color: #000000;
+    margin: 1.875rem 0;
+}
+
+.col.right .image .card p {
+    font-weight: 400;
+}
+
+.col.right .image .card .small-round {
+    margin: 2.1875rem auto;
+    height: 3.125rem;
+    width: 3.125rem;
+    border-radius: 50%;
+    background-color: #9792e4;
+}
+
+.col.right .image .card .small-round i {
+    font-size: 1.125rem;
+    line-height: 50px;
+}
+
 /* #endregion TYPOGRAPHY*/
 
 /* #region COMMON*/
+
 img {
     width: 100%;
     display: block;
@@ -38,16 +100,24 @@ img {
     display: flex;
 }
 
+.card {
+    border-radius: 1.5625rem;
+    padding: 2.5rem;
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
 section {
     text-align: center;
 }
 
-.violet .container.grid .card {
-    background-color: white;
+.violet .container {
+    padding: 3rem;
 }
 
-.box h3 {
-    color: #fdc15f;
+.violet .container.grid .card,
+.violet .container.plan .card {
+    background-color: white;
 }
 
 .btn {
@@ -70,6 +140,7 @@ section {
 /* #endregion COMMON*/
 
 /* #region DEBUG*/
+
 .round {
     height: 150px;
     width: 150px;
@@ -78,40 +149,15 @@ section {
     margin: 0 auto;
 }
 
-.col.left,
-.col.right {
-    height: 930px;
-    width: 50%;
-}
-
-.col.right {
-    display: flex;
-    align-items: end;
-}
-
-.col .img {
-    width: 100%;
-    height: 70%;
-    border: 2px dashed black;
-}
-
-.col .txt {
-    width: 100%;
-}
-
-.about .container {
-    height: 620px;
-}
-
 .info,
-.quote,
-.box {
+.quote {
     border: 2px dashed black;
 }
 
 /* #endregion DEBUG*/
 
 /* #region HEADER*/
+
 header {
     color: #ffffff;
     background-color: #0084fd;
@@ -130,7 +176,7 @@ header .navbar .menu {
     display: flex;
 }
 
-header .navbar ul {
+header .navbar .menu ul {
     list-style-type: none;
     display: flex;
     align-items: center;
@@ -152,11 +198,12 @@ header .navbar a:not(.btn) {
 /* #region MAIN*/
 
 /* Sezione Demo */
+
 .container.grid {
     gap: 1.5rem;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 6.25rem;
+    padding: 0 3rem 6.25rem;
 }
 
 #grow {
@@ -164,41 +211,40 @@ header .navbar a:not(.btn) {
     flex-grow: 2;
 }
 
-.card {
+.container.grid .card {
     width: calc((100% - 3rem) / 3);
     color: #5a6e7f;
-    font-weight: bold;
     background-color: #b5ddff;
-    padding: 2rem;
     display: flex;
     gap: 2.5rem;
-    border-radius: 1rem;
 }
 
-.card .left {
+.container.grid .card .left {
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 3rem;
     align-items: start;
 }
 
-.card .right {
+.container.grid .card .right {
+    width: 50%;
     align-self: end;
     position: relative;
-    bottom: -2rem;
+    bottom: -2.5rem;
 }
 
-.card .grid-box {
+.container.grid .card .grid-box {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.card .grid-box h4 {
+.container.grid .card .grid-box h4 {
     margin: 1.8rem 0 2.5rem;
 }
 
-.card .grid-box i {
+.container.grid .card .grid-box i {
     font-size: 5rem;
     color: #0084fd;
 }
@@ -206,18 +252,49 @@ header .navbar a:not(.btn) {
 /* /Sezione Demo */
 
 /* Sezione Strategic Planning */
+
+.col.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    padding-left: 8.125rem;
+}
+
+.col.left .image {
+    width: 70%;
+}
+
+.col.left .txt {
+    padding: 0 3rem;
+}
+
+.col.right {
+    width: 40%;
+    display: flex;
+    align-items: end;
+    padding-right: 8.125rem;
+}
+
+.col.right .image .card {
+    font-style: italic;
+    color: #000000;
+}
+
 .violet {
     color: #ffffff;
     background-color: #9792e4;
 }
 
-.container .col {
+.container.plan {
+    gap: 4.375rem;
     padding: 3rem;
 }
 
 /* /Sezione Strategic Planning */
 
 /* Sezione Testimonial */
+
 .container .people {
     text-align: center;
     padding: 3rem;
@@ -234,8 +311,9 @@ header .navbar a:not(.btn) {
 /*/ Sezione Testimonial */
 
 /* Sezione About us */
+
 .about .container {
-    padding: 6.5rem 0;
+    padding: 6.5rem 3rem;
     gap: 3rem;
 }
 
@@ -250,41 +328,57 @@ header .navbar a:not(.btn) {
 /* /Sezione About us */
 
 /* Sezione Call to action */
-.box {
+
+.container .box {
     margin: 0 auto;
-    padding: 2.5rem;
-    width: 50%;
+    padding: 3rem;
     text-align: center;
 }
 
-.box .btn {
-    margin: 2rem;
+.container .box p {
+    width: 50%;
+    margin: 0 auto;
 }
 
+.container .box .btn {
+    width: 25%;
+    margin: 2rem auto;
+}
 
 /* /Sezione Call to action */
-
 
 /* #endregion MAIN*/
 
 
 /* #region FOOTER*/
+
 footer {
     color: #ffffff;
     background-color: #333333;
 }
 
-footer .box {
+footer .container {
+    padding: 3rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2.5rem;
+    text-align: center;
+}
+
+footer .container p {
+    width: 50%;
+    margin: 0 auto;
+
 }
 
 /* #endregion FOOTER*/
 
 
 /* #region MEDIA QUERIES*/
+
 /* Desktop da 768px a 1400px*/
+
 @media screen and (max-width:1400px) {
 
     .container {
@@ -304,6 +398,7 @@ footer .box {
 }
 
 /* Tablet da 480px a 768px*/
+
 @media screen and (max-width:768px) {
 
     .only-mobile {
@@ -318,13 +413,24 @@ footer .box {
         flex-direction: column;
     }
 
+    .container.grid .card .left,
+    .container.grid .card .right {
+        width: 100%;
+    }
+
+    .violet .container {
+        padding: 2rem;
+    }
+
     .container.plan {
         flex-direction: column;
+        padding: 2rem;
     }
 
     .col.left,
     .col.right {
         width: 100%;
+        padding: 0;
     }
 
     .col.right.txt {
@@ -340,7 +446,7 @@ footer .box {
     }
 
     .about .container {
-        padding: 2rem;
+        padding: 3rem;
     }
 
     .about .container .info {
@@ -351,20 +457,25 @@ footer .box {
         width: 40%;
     }
 
-    .box {
+    .container .box {
         width: 100%;
+    }
+
+    .container .box .btn {
+        width: 30%;
     }
 
 }
 
 /* Mobile da 0 a 480px*/
+
 @media screen and (max-width:480px) {
 
     .grid {
         flex-direction: column;
     }
 
-    .card,
+    .container.grid .card,
     #grow {
         width: 100%;
     }
@@ -398,6 +509,10 @@ footer .box {
 
     .box {
         width: 100%;
+    }
+
+    .container .box .btn {
+        width: 50%;
     }
 
 }
