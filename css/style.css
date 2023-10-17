@@ -412,7 +412,7 @@ header .navbar a:not(.btn) {
     font-size: 4rem;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 2rem;
 }
 
 .quote p {
@@ -443,12 +443,13 @@ header .navbar a:not(.btn) {
 .container .box .btn {
     width: 25%;
     margin: 2rem auto;
+    font-weight: bold;
+    color: #9792e4;
 }
 
 /* /Sezione Call to action */
 
 /* #endregion MAIN*/
-
 
 /* #region FOOTER*/
 
@@ -476,7 +477,6 @@ footer .container a {
 }
 
 /* #endregion FOOTER*/
-
 
 /* #region MEDIA QUERIES*/
 
